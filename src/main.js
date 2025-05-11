@@ -1,24 +1,33 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { getCharacters } from './api/rickmorty.js';
+import { renderCharacterCard } from './components/card.js';
+import { setupFilters } from './components/filters.js';
+import { getFavorites } from './utils/storage.js';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const characterList = document.getElementById("character-list");
+const toggleButton = document.getElementById("toggle-favorites");
 
-setupCounter(document.querySelector('#counter'))
+let allCharacters =[];
+
+function render(characters){
+characterList.innerHTML = "";
+characters.forEach(char => {
+  characterList.appendChild(renderCharacterCard(char));
+});
+}
+
+async function init() {
+
+  allCharacters = await getCharacters();
+  render(allCharacters);
+  setupFilters(allCharacters,render);
+
+  toggleButton.addEventListener("click", ()=> {
+const favIds = getFavorites();
+const favCharacters = allCharacters.filter (c => favIds.includes(c.id));
+render(favCharacters);
+  });
+
+}
+
+init();
