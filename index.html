@@ -2,12 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
     <title>Rick and Morty explorer</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header> 
+      <h1>Rick & Morty Explorer</h1>
+      <input type="text" id="search" placeholder="Zoek personnages..."/>
+      <select id="filter-species"><option value="">Alle Soorten</option></select>
+      <button id="toggle-favorites">Toon favorieten</button>
+
+    </header>
+
+    <main id="character-list"></main>
+
+    <template id="character-card-template">
+      <div class="card">
+        <img />
+        <h2></h2>
+        <p class="species"></p>
+        <p class="location"></p>
+        <button class="favorite-button">⭐</button>
+
+      </div>
+
+    </template>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
