@@ -8,7 +8,7 @@ export function renderCharacterCard(character) {
   clone.querySelector(".species").textContent = character.species;
   clone.querySelector(".location").textContent = character.location.name;
 
-  const favBtn = clone.querySelector(".favorite-btn");
+  const favBtn = clone.querySelector(".favorite-button");
   favBtn.textContent = isFavorite(character.id) ? "💖" : "⭐";
 
   favBtn.addEventListener("click", () => {

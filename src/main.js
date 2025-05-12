@@ -1,4 +1,3 @@
-import './style.css'
 import { getCharacters } from './api/rickmorty.js';
 import { renderCharacterCard } from './components/card.js';
 import { setupFilters } from './components/filters.js';
@@ -30,4 +29,5 @@ render(favCharacters);
 
 }
 
+console.log("test 12");
 init();

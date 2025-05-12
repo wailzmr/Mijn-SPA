@@ -2,7 +2,7 @@ export function setupFilters(characters, renderFunction){
 const searchInput =  document.getElementById("search");
 const filterSelect = document.getElementById("filter-species");
 
-const speciesList = {...new Set(characters.map(c => c.species))};
+const speciesList = [...new Set(characters.map(c => c.species))];
 speciesList.forEach(species =>{
     const opt = document.createElement("option");
     opt.value = species;
