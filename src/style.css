@@ -8,7 +8,8 @@
 body {
   font-family: sans-serif;
   padding: 1rem;
-  background-color: #242424
+  background-color: #242424;
+  background-image: url(components/istockphoto-99150175-640x640.jpg)
 }
 
 header {
@@ -41,4 +42,33 @@ main {
 .card img {
   width: 100%;
   border-radius: 10px;
+}
+
+.card:hover {
+
+  filter: drop-shadow(0 0 2em #03d831aa);
+
+}
+
+h1 {
+ margin-left: 4rem;
+  color: wheat;
+
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.logo img {
+  padding-top: 1.3rem;
+  height: 50px;
+
+}
+
+.logo:hover{
+  filter: drop-shadow(0 0 0.5rem #03d831aa);
 }
