@@ -2,6 +2,7 @@ import { getCharacters } from './api/rickmorty.js';
 import { renderCharacterCard } from './components/card.js';
 import { setupFilters } from './components/filters.js';
 import { getFavorites } from './utils/storage.js';
+import { setupSorting } from './components/sort.js';
 
 const characterList = document.getElementById("character-list");
 const toggleButton = document.getElementById("toggle-favorites");
@@ -20,6 +21,7 @@ async function init() {
   allCharacters = await getCharacters();
   render(allCharacters);
   setupFilters(allCharacters,render);
+  setupSorting(allCharacters,render);
 
   toggleButton.addEventListener("click", ()=> {
 const favIds = getFavorites();
