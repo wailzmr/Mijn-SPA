@@ -1,6 +1,7 @@
 export function setupThemeSwitcher() {
   const themeBtn = document.createElement("button");
-  themeBtn.textContent = "Toggle Theme";
+  themeBtn.textContent = "Thema wisselen";
+  themeBtn.id = "toggle-theme" ; 
   document.querySelector("header").appendChild(themeBtn);
 
   themeBtn.addEventListener("click", () => {
