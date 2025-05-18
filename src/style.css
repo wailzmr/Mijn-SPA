@@ -78,3 +78,13 @@ h1 {
 .logo:hover {
   filter: drop-shadow(0 0 0.5rem #03d831aa);
 }
+
+.dark-theme {
+  background-color: #3d3c3c;
+  color: #eee;
+}
+
+.dark-theme .card {
+  background: #222;
+  color: white;
+}

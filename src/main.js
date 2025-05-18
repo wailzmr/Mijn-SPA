@@ -3,6 +3,7 @@ import { renderCharacterCard } from './components/card.js';
 import { setupFilters } from './components/filters.js';
 import { getFavorites } from './utils/storage.js';
 import { setupSorting } from './components/sort.js';
+import { setupThemeSwitcher } from './utils/themes.js';
 
 const characterList = document.getElementById("character-list");
 const toggleButton = document.getElementById("toggle-favorites");
@@ -22,7 +23,7 @@ async function init() {
   render(allCharacters);
   setupFilters(allCharacters,render);
   setupSorting(allCharacters,render);
-
+  setupThemeSwitcher()
   toggleButton.addEventListener("click", ()=> {
 const favIds = getFavorites();
 const favCharacters = allCharacters.filter (c => favIds.includes(c.id));
