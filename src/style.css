@@ -87,6 +87,30 @@ h1 {
 .dark-theme .card {
   background: #222;
   color: white;
+  
+}
+
+.dark-theme .card:hover {
+
+filter: drop-shadow(0 0 2em #00bfffaa);
+
+}
+
+
+
+.dark-theme select,
+.dark-theme input {
+  background-color: #444;
+  color: deepskyblue;
+  border: 1px solid #00bfff80;
+  text-shadow: 0 0 5px #00bfffaa;
+}
+.dark-theme #toggle-theme,
+.dark-theme #toggle-favorites {
+  background-color: #222;
+  color: #03d831;
+  border: 1px solid #03d83180;
+  text-shadow: 0 0 5px #03d831aa;
 }
 
 
