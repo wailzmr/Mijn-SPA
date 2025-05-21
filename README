@@ -39,7 +39,7 @@ Deze app haalt data op van de officiële [Rick and Morty API](https://rickandmor
 - JavaScript (ES6 Modules)
 - Fetch API voor data ophalen
 - LocalStorage voor favorieten en thema
-- Rick and Morty API ([https://rickandmortyapi.com/api/character](https://rickandmortyapi.com/api/character))
+- Rick and Morty API [https://rickandmortyapi.com/api/character](https://rickandmortyapi.com/api/character]
 
 ---
 
