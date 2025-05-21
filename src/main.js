@@ -9,6 +9,7 @@ const characterList = document.getElementById("character-list");
 const toggleButton = document.getElementById("toggle-favorites");
 
 let allCharacters =[];
+let showingFavorites = false;
 
 function render(characters){
 characterList.innerHTML = "";
@@ -25,11 +26,17 @@ async function init() {
   setupSorting(allCharacters,render);
   setupThemeSwitcher()
   toggleButton.addEventListener("click", ()=> {
-const favIds = getFavorites();
-const favCharacters = allCharacters.filter (c => favIds.includes(c.id));
-render(favCharacters);
-  });
-
+if (!showingFavorites) {
+    const favIds = getFavorites();
+    const favCharacters = allCharacters.filter(c => favIds.includes(c.id));
+    render(favCharacters);
+    toggleButton.textContent = "Toon alle";
+    showingFavorites = true;
+  } else {
+    render(allCharacters);
+    toggleButton.textContent = "Toon favorieten";
+    showingFavorites = false;
+  }});
 }
 
 console.log("test 12");
