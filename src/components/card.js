@@ -6,7 +6,7 @@ export function renderCharacterCard(character) {
   clone.querySelector("img").src = character.image;
   clone.querySelector("h2").textContent = character.name;
   clone.querySelector(".species").textContent = character.species;
-  clone.querySelector(".location").textContent = `Location: ${character.location.name}`;
+  clone.querySelector(".location").textContent = `Location: ${character.location.name}`;      //gaat de template clonen en vult die met characterdata. 
   clone.querySelector(".status").textContent = `Status: ${character.status}`;
   clone.querySelector(".gender").textContent = `Gender: ${character.gender}`;
 

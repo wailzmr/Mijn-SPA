@@ -7,7 +7,7 @@ export function setupSorting(characters, renderFunction) {
     <option value="status">Status</option>
   `;
   sortSelect.id = "sort-select";
-  document.querySelector("header").appendChild(sortSelect);
+  document.querySelector("header").appendChild(sortSelect);     //Sorteert op naam, soort of status via dropdown.    
 
   sortSelect.addEventListener("change", () => {
     const sorted = [...characters].sort((a, b) => {

@@ -13,7 +13,7 @@ export function toggleFavorite(id){
 
     let favorites = getFavorites();
     if(favorites.includes(id)){
-        favorites=favorites.filter(favId => favId !== id);
+        favorites=favorites.filter(favId => favId !== id);              //Beheer van favorieten via lokale opslag.
     } else {
         
         favorites.push(id);

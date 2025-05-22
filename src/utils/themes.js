@@ -6,7 +6,7 @@ export function setupThemeSwitcher() {
 
   themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-theme");
-    localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");
+    localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");       // Knop wisselt tussen licht en donker thema, status bewaard in localStorage.
   });
 
   if (localStorage.getItem("theme") === "dark") {

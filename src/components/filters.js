@@ -2,9 +2,9 @@ export function setupFilters(characters, renderFunction){
 const searchInput =  document.getElementById("search");
 const filterSelect = document.getElementById("filter-species");
 
-const speciesList = [...new Set(characters.map(c => c.species))];
+const speciesList = [...new Set(characters.map(c => c.species))];           //Filtert op gekozen soort.     
 speciesList.forEach(species =>{
-    const opt = document.createElement("option");
+    const opt = document.createElement("option");         
     opt.value = species;
     opt.textContent = species;
     filterSelect.appendChild(opt);
@@ -14,7 +14,7 @@ let inputTimeout;
 
 function applyFilters(){
 const search = searchInput.value.toLowerCase();
-const selectedSpecies = filterSelect.value;
+const selectedSpecies = filterSelect.value;              //Filtert personages op naam op basis van invoerveld
 
 if (search && search.length < 2) {
       

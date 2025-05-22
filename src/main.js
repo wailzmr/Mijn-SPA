@@ -1,5 +1,5 @@
 import { getCharacters } from './api/rickmorty.js';
-import { renderCharacterCard } from './components/card.js';
+import { renderCharacterCard } from './components/card.js';       //Structurering in aparte modules en alles naar hier importeren om de main code netjes te behouden.   
 import { setupFilters } from './components/filters.js';
 import { getFavorites } from './utils/storage.js';
 import { setupSorting } from './components/sort.js';
@@ -20,7 +20,7 @@ characters.forEach(char => {
 
 async function init() {
 
-  allCharacters = await getCharacters();
+  allCharacters = await getCharacters();     
   render(allCharacters);
   setupFilters(allCharacters,render);
   setupSorting(allCharacters,render);
@@ -28,7 +28,7 @@ async function init() {
   toggleButton.addEventListener("click", ()=> {
 if (!showingFavorites) {
     const favIds = getFavorites();
-    const favCharacters = allCharacters.filter(c => favIds.includes(c.id));
+    const favCharacters = allCharacters.filter(c => favIds.includes(c.id));        //Wisselt tussen alle en favoriete personages.
     render(favCharacters);
     toggleButton.textContent = "Toon alle";
     showingFavorites = true;

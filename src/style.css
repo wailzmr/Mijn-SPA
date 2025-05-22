@@ -103,7 +103,7 @@ filter: drop-shadow(0 0 2em #00bfffaa);
   background-color: #444;
   color: deepskyblue;
   border: 1px solid #00bfff80;
-  text-shadow: 0 0 5px #00bfffaa;
+  text-shadow: 0 0 5px #00bfffaa;      /*Knop wisselt tussen licht en donker thema, status bewaard in localStorage.*/
 }
 .dark-theme #toggle-theme,
 .dark-theme #toggle-favorites {
@@ -127,7 +127,7 @@ filter: drop-shadow(0 0 2em #00bfffaa);
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {               /*Layout en styling past zich aan aan mobiele weergave. */
   body {
     padding: 0.5rem;
     background-size: cover;
