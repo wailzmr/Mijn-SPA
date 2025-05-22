@@ -18,7 +18,7 @@ const selectedSpecies = filterSelect.value;              //Filtert personages op
 
 if (search && search.length < 2) {
       
-      console.warn("Zoekterm moet minstens 2 karakters bevatten.");
+      console.warn("Zoekterm moet minstens 2 karakters bevatten.");     // dit zorgt ervoor dat je 2 of meer characters moet schrijven om iets te kunnen opzoeken
       return;
 }
 
