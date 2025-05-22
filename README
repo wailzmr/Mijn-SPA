@@ -39,7 +39,7 @@ Deze app haalt data op van de officiële [Rick and Morty API](https://rickandmor
 - JavaScript (ES6 Modules)
 - Fetch API voor data ophalen
 - LocalStorage voor favorieten en thema
-- Rick and Morty API [https://rickandmortyapi.com/api/character](https://rickandmortyapi.com/api/character]
+- Rick and Morty API [https://rickandmortyapi.com/api/character](https://rickandmortyapi.com/api/character)
 
 ---
 
@@ -90,6 +90,18 @@ Contact: wail.zemouri@student.ehb.be
 | **Responsief design**                       | `style.css`              | Media query vanaf regel 121 (`@media (max-width: 768px)`) | Layout en styling past zich aan aan mobiele weergave.                      |
 | **Gebruik van ES6 modules**                 | `main.js` + alle imports | Overal (`import` statements bovenaan elk bestand)         | Structurering in aparte modules.                                           |
 | **Gebruik van Fetch API**                   | `rickmorty.js`           | Regel 7 (`fetch(...)`)                                    | Haalt de characterdata op.                                                 |
+
+---
+
+## Bronnen
+
+Rick and Morty API - https://rickandmortyapi.com/ - voor het ophalen van personagedata en de logo
+Vite - https://vite.dev/ - voor het opstellen van dit project
+W3schools - https://www.w3schools.com/js/default.asp - voor referentie over JS, Fetch API, en CSS
+MDN Web Docs - https://developer.mozilla.org/fr/ - voor referentie over JS, Fetch API, en CSS
+ChatGPT - https://chatgpt.com/share/682f2f5b-47c8-8006-9a41-00b512e8768e - voor help bij bepaalde onderdelen 
+Emojipedia - https://emojipedia.org/fr/%C3%A9toile - voor het ophalen van emoji's voor de lay-out van sommige buttons
+iStock - https://www.istockphoto.com/fr/vid%C3%A9os/ciel-etoile - voor de background image 
 
 ---
 
