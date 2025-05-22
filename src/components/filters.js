@@ -10,9 +10,17 @@ speciesList.forEach(species =>{
     filterSelect.appendChild(opt);
 });
 
+let inputTimeout;
+
 function applyFilters(){
 const search = searchInput.value.toLowerCase();
 const selectedSpecies = filterSelect.value;
+
+if (search && search.length < 2) {
+      
+      console.warn("Zoekterm moet minstens 2 karakters bevatten.");
+      return;
+}
 
 const filtered = characters.filter(char => 
     char.name.toLowerCase().includes(search) && 
@@ -22,7 +30,10 @@ const filtered = characters.filter(char =>
 renderFunction(filtered);
 }
 
-searchInput.addEventListener("input", applyFilters);
+searchInput.addEventListener("input", () => {
+    clearTimeout(inputTimeout); 
+    inputTimeout = setTimeout(applyFilters, 300); 
+  });
 filterSelect.addEventListener("change", applyFilters);
 
 }
