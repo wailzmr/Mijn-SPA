@@ -77,6 +77,22 @@ Contact: wail.zemouri@student.ehb.be
 
 ---
 
+| Vereiste                                    | Bestandsnaam             | Regel(s) of functie                                       | Uitleg                                                                     |
+| ------------------------------------------- | ------------------------ | --------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **Gebruik van een externe API**             | `rickmorty.js`           | Regel 5–13 (`getCharacters`)                              | Haalt data op van de [Rick and Morty API](https://rickandmortyapi.com).    |
+| **Zoekfunctionaliteit**                     | `filters.js`             | Regel 9 & 14 (`searchInput`, `applyFilters`)              | Filtert personages op naam op basis van invoerveld.                        |
+| **Filterfunctionaliteit (species)**         | `filters.js`             | Regel 3–7 (opbouw dropdown), regel 14 (`applyFilters`)    | Filtert op gekozen soort.                                                  |
+| **Sorteerfunctionaliteit**                  | `sort.js`                | Regel 1–18 (`setupSorting`)                               | Sorteert op naam, soort of status via dropdown.                            |
+| **Favorieten opslaan in localStorage**      | `storage.js`             | `getFavorites`, `toggleFavorite`, `isFavorite`            | Beheer van favorieten via lokale opslag.                                   |
+| **Favorieten tonen/verbergen**              | `main.js`                | Regel 22–36 (eventlistener op `toggleButton`)             | Wisselt tussen alle en favoriete personages.                               |
+| **Dynamisch renderen met template cloning** | `card.js`                | Regel 4–20 (`renderCharacterCard`)                        | Clonet de template en vult die met characterdata.                          |
+| **Dark mode (thema wisselaar)**             | `themes.js`              | Regel 1–16 (`setupThemeSwitcher`)                         | Knop wisselt tussen licht en donker thema, status bewaard in localStorage. |
+| **Responsief design**                       | `style.css`              | Media query vanaf regel 121 (`@media (max-width: 768px)`) | Layout en styling past zich aan aan mobiele weergave.                      |
+| **Gebruik van ES6 modules**                 | `main.js` + alle imports | Overal (`import` statements bovenaan elk bestand)         | Structurering in aparte modules.                                           |
+| **Gebruik van Fetch API**                   | `rickmorty.js`           | Regel 7 (`fetch(...)`)                                    | Haalt de characterdata op.                                                 |
+
+---
+
 ## Licentie
 
 MIT License
